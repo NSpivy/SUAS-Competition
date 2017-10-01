@@ -43,11 +43,15 @@ class TestSDAConverter(unittest.TestCase):
         self.assertTrue(abs(new_gps_point.get_lon() - test_waypoint.get_lon()) < 0.004)
 
     def test_add_obstacle(self):
+<<<<<<< 233238f0246d8aabafa1402f829f2200290c742d:tests/unit_tests/test_suassystem_sda_converter.py
         new_obstacle = interop.StationaryObstacle(38.8703041, -77.3214035, 0, 60.950000762939453)
         self.sda_converter.add_obstacle(Location(38.8703041, -77.3214035, 60.950000762939453), new_obstacle)
         obstacle_map = self.sda_converter.obstacle_map
 
         self.assertEqual(obstacle_map.obstacles.size, 1)
+=======
+        #test
+>>>>>>> outline unit test and fixed comment error:tests/unit_tests/test_suassystem_sda_converter.py
 
     def test_reset_obstacles(self):
         """
@@ -65,6 +69,7 @@ class TestSDAConverter(unittest.TestCase):
         self.assertEqual(obstacle_map.obstacles.size, 0)
 
     def test_set_uav_position(self):
+<<<<<<< 233238f0246d8aabafa1402f829f2200290c742d:tests/unit_tests/test_suassystem_sda_converter.py
         new_location = Location (40, -80, 95)
         self.sda_converter.set_uav_position(new_location)
 
@@ -74,3 +79,21 @@ class TestSDAConverter(unittest.TestCase):
         self.assertEqual(self.sda_converter.obstacle_map.drone.point[0], converted_uav_location[0])
         self.assertEqual(self.sda_converter.obstacle_map.drone.point[1], converted_uav_location[1])
         self.assertEqual(self.sda_converter.obstacle_map.drone.point[2], converted_uav_location[2])
+=======
+
+    def test_avoid_obstacles(self):
+
+    def test_has_path_changed(self):
+
+    def test_has_uav_completed_guided_path(self):
+
+    def test_does_guided_path_exist(self):
+
+    def test_get_uav_avoid_coordinates(self):
+
+    def test_has_uav_reached_guided_waypoint(self):
+
+    def test_get_distance_to_current_guided_waypoint(self):
+
+    def test_is_obstacle_in_path(self):
+>>>>>>> outline unit test and fixed comment error:tests/unit_tests/test_suassystem_sda_converter.py
